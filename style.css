@@ -1,0 +1,440 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* === En-tête et navigation === */
+
+header {
+  padding: 1rem;
+  color: #fff;
+  background-color: hwb(0 0% 100%);
+}
+
+/* Barre de navigation */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Style du logo dans la navigation */
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Liste des liens de navigation */
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+/* Espacement entre les éléments de la liste */
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+/* Style des liens de navigation */
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+/* Effet au survol et pour le lien actif */
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fffb00;
+}
+
+/* === Boutons génériques === */
+
+.btn,
+.btnindex,
+.btncarte {
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #f4f4f4;
+  background-color: #d4d003;
+}
+
+/* Effet au survol des boutons */
+
+.btn:hover,
+.btnindex:hover {
+  background-color: #7e7c03;
+}
+
+/* === Pied de page === */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 4rem; /* Ajoute un grand espace avant le pied de page */
+  padding: 1rem; /* Ajoute un espace intérieur de 1rem */
+  text-align: center; /* Centre le texte */
+  text-align: center;
+  color: #fff; /* Texte en blanc */
+  color: white;
+  background: #545400;
+  background-color: #232f3e; /* Définit un fond bleu foncé */
+}
+
+/*Ecriture*/
+
+.titre {
+  margin: 40px;
+  text-align: center;
+  color: #fffb00;
+}
+
+.texte {
+  text-align: center;
+  color: white;
+}
+
+/*Section*/
+
+.accueil1,
+.form,
+.carte,
+.about {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  padding-bottom: 800px;
+  text-align: center;
+  background: url("image/Beige\ Modern\ Elegant\ Personal\ LinkedIn\ Banner.jpg")
+    no-repeat center center;
+  background-size: cover;
+}
+
+.btnindex {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #d4d003;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product {
+  margin: 20px;
+  padding: 2rem;
+  padding-right: 70px;
+  padding-left: 70px;
+  border: 4px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.btnproduct {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #d4d003;
+}
+
+.product:hover {
+  background-color: #fffb00;
+  transform: translateY(-5px);
+}
+
+.btnproduct:hover {
+  color: #d4d003;
+  background-color: white;
+}
+
+article {
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+}
+
+.titre2 {
+  margin: 60px 40px 40px 40px;
+  text-align: center;
+  color: #fffb00;
+}
+
+.imagearticle {
+  align-items: center;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  margin-left: -50px;
+  border-radius: 15px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 600px;
+}
+
+/* Conteneur des champs pour un bon alignement */
+
+.form .input-group {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+/* Style des labels */
+
+.form label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: white;
+  background: #d4d003;
+  transition: 0.3s;
+  transform: translateY(-50%);
+}
+
+/* Quand l'input est focus, le label remonte */
+
+.form input:focus + label,
+.form input:not(:placeholder-shown) + label,
+.form select:focus + label,
+.form select:not(:placeholder-shown) + label,
+.form textarea:focus + label,
+.form textarea:not(:placeholder-shown) + label {
+  top: 0;
+  left: 10px;
+  font-size: 12px;
+  color: white;
+}
+
+/* Style des inputs */
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background: white;
+}
+
+/* Pour aligner Nom et Prénom sur la même ligne */
+
+.form .flex-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Assure que chaque champ prend 50% de l'espace disponible */
+
+.form .flex-container .input-group {
+  flex: 1;
+}
+
+/* Style du bouton */
+
+.form button {
+  margin-top: 2rem;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white;
+  background: #d4d003;
+  cursor: pointer;
+}
+
+.form button:hover,
+.btncarte:hover {
+  background: #7e7c03;
+}
+
+/* Responsive*/
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .products-details {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 40vh;
+  }
+
+  .nav label {
+    padding: 5px;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel {
+    height: 35vh;
+  }
+
+  .nav label {
+    padding: 5px;
+    font-size: 1.2em;
+  }
+}
+
+/* Style des mocktails */
+
+.mocktail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: auto;
+  max-width: 900px;
+  color: white;
+}
+
+/* Style des éléments de mocktail */
+
+.mocktail {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mocktail h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.mocktail p {
+  font-size: 1rem;
+  color: gray;
+}
+
+.ingredients {
+  display: inline-block;
+  margin: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Prix */
+
+.price {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btncarte {
+  margin: 60px;
+}
+
+/* Colonnes */
+
+.colonne {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Ajustement des tailles pour éviter les problèmes */
+
+.texte {
+  width: 48%;
+}
+
+.video {
+  width: 48%;
+}
+
+/* Styles du texte */
+
+.colonne h2 {
+  color: #d4d003;
+}
+
+.colonne p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Bouton Réserver */
+
+.btn-reserver {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: #d4d003;
+}
+
+.btn-reserver:hover {
+  background: #545400;
+}
+
+/* Vidéo Responsive */
+
+.video-container {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}

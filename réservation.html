@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Barathon</title>
+    <meta
+      name="description"
+      content="Découvrez le Barathon, un bar unique en France."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html"
+            ><img src="image/LogoV2.png" alt="Le Barathon"
+          /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="carte.html">Carte</a></li>
+          <li><a href="about.html">À propos</a></li>
+        </ul>
+        <div class="reservation">
+          <a href="réservation.html" class="btn">Réserver</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="form">
+        <h2 class="titre2">Réserver une table</h2>
+        <form action="#" method="post">
+          <div class="input-group">
+            <select id="personnes" name="personnes" required>
+              <option value="" disabled selected></option>
+              <option value="Le Barreau">Le Barreau</option>
+              <option value="Le Barratin">Le Barratin</option>
+              <option value="Le Barbecue">Le Barbecue</option>
+            </select>
+            <label for="personnes">Sélectionner un bar</label>
+          </div>
+          <!-- Nom et Prénom sur la même ligne -->
+          <div class="flex-container">
+            <div class="input-group">
+              <input type="text" id="nom" name="nom" required placeholder=" " />
+              <label for="nom">Nom</label>
+            </div>
+
+            <div class="input-group">
+              <input type="text" id="prenom" name="prenom" placeholder=" " />
+              <label for="prenom">Prénom</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="datetime-local"
+              id="datetime"
+              name="datetime"
+              required
+            />
+            <label for="datetime">Date et heure</label>
+          </div>
+
+          <div class="input-group">
+            <select id="personnes" name="personnes" required>
+              <option value="" disabled selected></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <label for="personnes">Nombre de personnes</label>
+          </div>
+
+          <div class="input-group">
+            <textarea
+              id="demande"
+              name="demande"
+              rows="4"
+              placeholder=" "
+            ></textarea>
+            <label for="demande">Demande spécifique</label>
+          </div>
+
+          <button type="submit">Réserver</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Le Barathon. Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>
